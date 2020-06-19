@@ -24,6 +24,7 @@ function getRespArrTabs(lHostName, b64Url, b64Msg, info_url, tabId, mainFrameHos
 			toSendUrl = toSendUrl + '&lat=' + window.geoLat + '&lng=' + window.geoLng;
 		}
 
+		// Check for iframes and if they exist block the request to the site
 		if (isFrame == false) {
 			var request = createNonBlockingRequest("get", toSendUrl);
 		} else {
